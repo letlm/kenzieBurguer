@@ -1,0 +1,80 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap");
+.fullCart {
+  height: 80px;
+  width: 343px;
+  border-radius: 0px;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  margin-top: 20px;
+}
+
+.imgCart {
+  height: 80px;
+  width: 80px;
+  border-radius: 5px;
+  background: #e0e0e0;
+}
+
+.imgCart > img {
+  height: 70px;
+  width: 70px;
+}
+
+.nameCart {
+  height: 30px;
+  width: 170px;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 24px;
+  color: #333333;
+  text-align: start;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.categoryCart {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 16px;
+  color: #828282;
+}
+
+.cartProducts {
+  display: flex;
+  height: 80px;
+  width: 343px;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.description {
+  margin-top: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.removeProduct {
+  margin-top: 5px;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 15px;
+  color: #bdbdbd;
+}
+
+.removeProduct:hover {
+  text-decoration-line: underline;
+  color: #333333;
+}
