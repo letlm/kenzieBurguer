@@ -4,6 +4,8 @@ import Header from "./components/Header";
 import Cart from "./components/Cart";
 import CartValue from "./components/CartValue";
 import ProductsList from "./components/ProductsList";
+import { toast, ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 function App() {
   const [search, setSearch] = useState("");
@@ -19,7 +21,15 @@ function App() {
 
   function handleClick(product) {
     if (product !== undefined && currentSale.includes(product)) {
-      alert("Item já adicionado no carrinho, por favor selecione outro!");
+      toast.error("Ops, acabou o estoque. Selecione outro por favor!", {
+        position: "top-center",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+      });
     } else {
       setCurrentSale([...currentSale, product]);
     }
@@ -34,6 +44,17 @@ function App() {
 
   return (
     <div className="App">
+      <ToastContainer
+        position="top-center"
+        autoClose={5000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+      />
       <Header setSearch={setSearch} />
       <div className="page">
         <ProductsList
